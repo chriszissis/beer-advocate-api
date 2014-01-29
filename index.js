@@ -101,6 +101,9 @@ exports.beerPage = function(url, callback) {
                 rAvg = stats[3].replace("\npDev",""),
                 pDev = stats[4].replace("\n\nRatings Help\n","");
 
+			//Pic
+			var pic = $('#baContent table').find('img:first-child').attr('src');
+				
 
             // Data to return
             var data = {
@@ -117,7 +120,8 @@ exports.beerPage = function(url, callback) {
                 ratings: ratings,
                 reviews: reviews,
                 rAvg: rAvg,
-                pDev: pDev
+                pDev: pDev,
+				pic: pic
             };
 
             // Add to beer array
